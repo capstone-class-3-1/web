@@ -1,0 +1,18 @@
+.Splash{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.Splash p {
+    font-family: 'SUITE';
+    font-weight: 200;
+    color: white;
+
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translate(-50%,0);
+}

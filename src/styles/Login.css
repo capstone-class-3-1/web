@@ -1,0 +1,34 @@
+.Login{
+    background-color: #F5F5F5;
+    height: 100vh;
+}
+
+.login_container{
+    align-content: center;
+    height: 78vh;
+}
+
+.Login .form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.found{
+    font-family: "SUITE";
+    font-weight: 400;
+    color: #8e8e8e;
+    font-size: 12px;
+    align-self: flex-end;
+    margin-bottom: 35px;
+}
+
+.signup{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.found_item{
+    color: #8e8e8e;
+}
