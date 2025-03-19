@@ -54,7 +54,7 @@ const Login = () => {
             <LoginHeader />
             <div className="login_container">
             <div className="form">
-                <AuthInput placeholder={"아이디"} type={"text"} data={user.username} handle={handleName}/>
+                <AuthInput placeholder={"이름"} type={"text"} data={user.username} handle={handleName}/>
                 <AuthInput placeholder={"비밀번호"} type={"password"} data={user.password} handle={handlePwd} />
                 <AuthButton value={"로그인"} onclick={onClickButton}/>
                 <div className="found">
