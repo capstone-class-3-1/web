@@ -2,7 +2,7 @@ import '../styles/Login.css'
 import LoginHeader from "../components/auth/LoginHeader";
 import AuthInput from '../components/auth/AuthInput';
 import AuthButton from '../components/auth/AuthButton';
-import { use, useState } from 'react';
+import { useState } from 'react';
 import Server from '../utils/API';
 import { Link } from 'react-router-dom';
 
@@ -62,7 +62,7 @@ const Login = () => {
                 </div>
                 <AuthButton value={"깃허브로 바로 로그인"} type={"git"} onclick={()=>console.log("안녕")}/>
                 <div className="found signup">
-                    <span className='found_item'>회원이 아니신가요?</span> <Link className='found_item'>회원가입하러가기</Link>
+                    <span className='found_item'>회원이 아니신가요?</span> <Link className='found_item' to={'/signup'}>회원가입하러가기</Link>
                 </div>
             </div>
             </div>
