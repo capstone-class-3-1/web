@@ -43,7 +43,7 @@ const Login = () => {
 
     const onClickButton = () => {
         if(user.username=='' || user.password==''){
-            alert('아이디와 비밀번호를 모두 입력해주세요.');
+            alert('이름과 비밀번호를 모두 입력해주세요.');
             return;
         }
         sendData();

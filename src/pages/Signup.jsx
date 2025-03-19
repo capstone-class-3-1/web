@@ -33,24 +33,28 @@ const Signup = () => {
     }
 
     const sendData = async () => {
-        Server.post('/auth/register',user,{
+        Server.post('/auth/register',{
+            'username': user.username,
+            'password': user.password,
+            'confirmPassword': user.confirmPassword 
+        },{
             headers:{
                 "Content-Type": 'application/json'
             }
         })
         .then((res)=>{
             console.log(res.data);
-            console.log('로그인 성공');
+            console.log('회원가입 성공');
         })
         .catch((error)=>{
             console.log(error);
-            console.log('로그인 실패');
+            console.log('회원가입 실패');
         })
     }
 
     const onClickButton = () => {
         if(user.username=='' || user.password==''){
-            alert('아이디와 비밀번호를 모두 입력해주세요.');
+            alert('이름과 비밀번호를 모두 입력해주세요.');
             return;
         }
         if(user.password!==user.confirmPassword){
@@ -71,7 +75,7 @@ const Signup = () => {
                 <div style={{marginBottom: '50px'}}/>
                 <AuthButton value={"회원가입 하기"} onclick={onClickButton}/>
                 <div className="found signup">
-                    <span className='found_item'>이미 회원이신가요?</span> <Link className='found_item' to={'/login'}>로그인하러가기</Link>
+                    <span className='found_item'>이미 회원이신가요</span> <Link className='found_item' to={'/login'}>로그인하러가기</Link>
                 </div>
             </div>
             </div>
