@@ -33,18 +33,22 @@ const Signup = () => {
     }
 
     const sendData = async () => {
-        Server.post('/auth/register',user,{
+        Server.post('/auth/register',{
+            'username': user.username,
+            'password': user.password,
+            'confirmPassword': user.confirmPassword 
+        },{
             headers:{
                 "Content-Type": 'application/json'
             }
         })
         .then((res)=>{
             console.log(res.data);
-            console.log('로그인 성공');
+            console.log('회원가입 성공');
         })
         .catch((error)=>{
             console.log(error);
-            console.log('로그인 실패');
+            console.log('회원가입 실패');
         })
     }
 
@@ -71,7 +75,7 @@ const Signup = () => {
                 <div style={{marginBottom: '50px'}}/>
                 <AuthButton value={"회원가입 하기"} onclick={onClickButton}/>
                 <div className="found signup">
-                    <span className='found_item'>이미 회원이신가요?</span> <Link className='found_item' to={'/login'}>로그인하러가기</Link>
+                    <span className='found_item'>이미 회원이신가요</span> <Link className='found_item' to={'/login'}>로그인하러가기</Link>
                 </div>
             </div>
             </div>
