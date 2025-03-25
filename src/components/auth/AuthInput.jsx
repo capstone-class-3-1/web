@@ -1,4 +1,4 @@
-import '../../styles/AuthInput.css'
+import '../../styles/components/auth/AuthInput.css'
 import { useState } from "react";
 import eyes from '../../assets/eye-close-solid.png';
 
