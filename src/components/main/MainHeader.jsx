@@ -1,3 +1,5 @@
+import '../../styles/components/main/MainHeader.css';
+
 import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
 
