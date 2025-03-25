@@ -28,7 +28,7 @@ const HeaderNav = ({isCommunity}) => {
             <div className="nav">
                 {
                     pageNavList.map((item)=>(
-                        <Link className="nav-item" to={item.to}><img src={item.icon} alt="icon" width={15}/>{item.title}</Link>
+                        <Link className="nav-item" to={item.to}><img src={item.icon} alt="icon" width={18}/>{item.title}</Link>
                     ))
                 }
                 
