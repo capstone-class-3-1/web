@@ -1,0 +1,47 @@
+.HeaderNav{
+    font-family: "Paperlogy";
+    font-weight: 400;
+    font-size: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.commuNav{
+    width: 230px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.commuNav .nav-item{
+    color: black;
+}
+
+.active-nav{
+    padding-bottom: 5px;
+    font-weight: 500;
+    border-bottom: 2px solid #5B8BF7;
+}
+
+.nav-item{
+    text-decoration: none;
+}
+
+.nav{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav .nav-item{
+    display: flex;
+    align-items: center;
+    color: #999999;
+}
+
+.nav img{
+    margin-right: 5px;
+}

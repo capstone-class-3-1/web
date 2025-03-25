@@ -1,4 +1,4 @@
-import '../../styles/LoginHeader.css';
+import '../../styles/components/auth/LoginHeader.css';
 import colorCode from '../../utils/color';
 
 const LoginHeader = () => {
