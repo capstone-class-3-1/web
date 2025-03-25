@@ -1,0 +1,32 @@
+.HeaderLogo{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    align-content: center;
+}
+
+.searchBox{
+    align-content: center;
+    background-color: white;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.searchBox input {
+    width: 340px;
+    font-family: "Paperlogy";
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+}
+
+.searchBox input:focus{
+    outline: none;
+}
+
+.searchBox button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}

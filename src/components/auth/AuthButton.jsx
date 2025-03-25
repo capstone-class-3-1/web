@@ -1,4 +1,4 @@
-import '../../styles/AuthButton.css';
+import '../../styles/components/auth/AuthButton.css';
 import colorCode from '../../utils/color';
 import github from '../../assets/github.png';
 
