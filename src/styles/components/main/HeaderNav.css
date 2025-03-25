@@ -1,0 +1,29 @@
+.HeaderNav{
+    font-family: "Paperlogy";
+    font-weight: 400;
+    font-size: 15px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.commuNav{
+    width: 230px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.commuNav .nav-item{
+    color: black;
+}
+
+.active-nav{
+    
+}
+
+.nav-item{
+    text-decoration: none;
+}

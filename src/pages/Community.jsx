@@ -1,3 +1,5 @@
+import '../styles/Community.css';
+
 import MainHeader from "../components/main/MainHeader";
 
 const Community = () => {

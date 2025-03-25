@@ -1,4 +1,6 @@
 import './App.css';
+import './fonts/font.css';
+
 import Login from './pages/Login';
 import Splash from './pages/Splash';
 import Signup from './pages/Signup';

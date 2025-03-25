@@ -1,3 +1,5 @@
+import '../styles/Main.css';
+
 import MainHeader from "../components/main/MainHeader";
 
 const Main = () => {

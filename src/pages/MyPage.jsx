@@ -1,3 +1,4 @@
+import '../styles/MyPage.css';
 
 const MyPage = () => {
     return(
