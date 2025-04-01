@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TeamListItem from "./TeamListItem";
 import '../../styles/components/team/TeamList.css';
+import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 const TeamDto = [
     {
@@ -55,6 +57,7 @@ const TeamDto = [
 ]
 
 const TeamList = () => {
+    const navigate = useNavigate();
     const [view,setView] = useState(false);
     return(
         <div className="ViewBox">
@@ -73,7 +76,11 @@ const TeamList = () => {
                         ))
                     }
                 </div>
+                <div className="button_container">
+                    <Button value={'글쓰기'} onclick={()=>{navigate('create')}}/>
+                </div>
             </div>
+            
         </div>
     )
 }

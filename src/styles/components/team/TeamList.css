@@ -39,3 +39,8 @@
 .team_list::-webkit-scrollbar{
     display: none;
 }
+
+.button_container{
+    justify-self: right;
+    margin-top: 20px;
+}
