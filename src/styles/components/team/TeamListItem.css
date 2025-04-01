@@ -1,0 +1,52 @@
+.TeamListItem{
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.TeamListItem h4,.TeamListItem p{
+    margin: 0;
+}
+
+.left_item{
+    margin-right: 20px;
+}
+
+.right_item p {
+    font-weight: 300;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top h4 {
+    width: 440px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.top p{
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.desc{
+    padding-top: 7px;
+    font-size: 13px;
+    width: 55vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.people{
+    font-size: 11px;
+    padding-top: 7px;
+    justify-self: right;
+}
