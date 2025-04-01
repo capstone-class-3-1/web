@@ -1,0 +1,65 @@
+.ViewBox{
+    height: 80vh;
+    align-content: center;
+}
+
+.CreateTeam{
+    width: 65vw;
+    justify-self: center;
+    max-height: 70vh;
+}
+
+.title{
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.title input{
+    outline: none;
+    border: none;
+    font-family: "Paperlogy";
+    font-size: 19px;
+    padding-bottom: 10px;
+    
+}
+
+.title input::placeholder{
+    color: #C2C2C2;
+}
+
+.team_info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.team_info input{
+    outline: none;
+    font-family: "Paperlogy";
+    font-weight: 300;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+}
+
+.craete_desc textarea{
+    width: 63.5vw;
+    resize: none;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    outline: none;
+    font-family: "Paperlogy";
+    font-weight: 300;
+    padding: 10px;
+}
+
+.craete_desc textarea::placeholder{
+    color: #C2C2C2;
+}
+
+.craete_desc{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DBDBDB;
+
+}

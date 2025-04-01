@@ -5,7 +5,7 @@ const Button = ({value, onclick}) => {
     return(
         <>
             <button
-                style={{backgroundColor:colorCode.pointBlue}}
+                style={{backgroundColor: value==="취소하기" ? '#D0D0D0': colorCode.pointBlue}}
                 onClick={onclick}>{value}</button>
         </>
     )
