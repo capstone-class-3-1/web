@@ -19,7 +19,7 @@ const CreateTeam = () => {
                         모집일 | <input type="date" /> ~ <input type="date" />
                     </div>
                 </div>
-                <div className="craete_desc">
+                <div className="create_desc">
                     <textarea  cols="112" rows="18" placeholder="모임에 대한 설명을 작성해주세요." />
                 </div>
                 <div className="button_container">

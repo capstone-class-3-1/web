@@ -1,0 +1,59 @@
+.ViewBox{
+    height: 80vh;
+    align-content: center;
+}
+
+.ViewTeam{
+    width: 65vw;
+    justify-self: center;
+    max-height: 70vh;
+}
+
+.team_title{
+    font-family: "Paperlogy";
+    font-size: 19px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid #DBDBDB; */
+}
+
+.team_status{
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.team_status span{
+    margin-left: 10px;
+}
+
+.owner_name{
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.owner_profile{
+    width: 30px;
+    height: 30px;
+    background-color: #d8d8d8;
+    border: 1px solid #D0D0D0;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.border{
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.team_name{
+    width: 380px;
+    margin-left: 20px;
+}
+
+
+.craete_desc.view textarea{
+    font-weight: 400;
+}

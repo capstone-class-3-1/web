@@ -1,10 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import '../../styles/components/team/TeamListItem.css'
 import colorCode from '../../utils/color';
 import RecruitStatus from "./RecruitStatus";
 
 const TeamListItem = ({status, title, desc, people, owner}) => {
+    const navigate = useNavigate();
+    const id = 1; //예시
+
     return(
-        <div className="TeamListItem">
+        <div className="TeamListItem" onClick={()=>{navigate(`view/${id}`)}}>
             <div className="left_item">
                 <RecruitStatus status={status}/>
             </div>
