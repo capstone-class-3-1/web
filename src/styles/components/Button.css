@@ -3,8 +3,9 @@ button{
     font-weight: 700;
     font-size: 15px;
     border: none;
-    padding: 3px;
+    padding: 2px;
     min-width: 90px;
     border-radius: 5px;
     margin-left: 10px;
+    align-content: center;
 }

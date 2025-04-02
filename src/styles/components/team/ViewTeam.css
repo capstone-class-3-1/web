@@ -50,7 +50,17 @@
 
 .team_name{
     width: 380px;
-    margin-left: 20px;
+}
+
+.view_desc textarea{
+    width: 63.5vw;
+    resize: none;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    outline: none;
+    font-family: "Paperlogy";
+    font-weight: 300;
+    padding: 10px;
 }
 
 

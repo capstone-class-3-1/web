@@ -31,9 +31,9 @@ function App() {
         <Route path='post'/>
         <Route path='team' element={<TeamList />}/>
           <Route path='team/create' element={<CreateTeam />}/>
-          <Route path='team/application/:id' element={<TeamApplication />}/>
+          <Route path='team/application/:teamCode' element={<TeamApplication />}/>
           <Route path='team/view/:id' element={<ViewTeam />}/>
-          <Route path='team/page/:id' element={<TeamPage />}/>
+          <Route path='team/page/:teamCode' element={<TeamPage />}/>
         <Route path='event'/>
       </Route>
       <Route path='mypage' element={<MyPage/>} />

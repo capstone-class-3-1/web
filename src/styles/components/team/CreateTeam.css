@@ -43,7 +43,7 @@
     border-radius: 5px;
 }
 
-.craete_desc textarea{
+.create_desc textarea{
     width: 63.5vw;
     resize: none;
     border: 1px solid #D0D0D0;
@@ -54,12 +54,11 @@
     padding: 10px;
 }
 
-.craete_desc textarea::placeholder{
+.create_desc textarea::placeholder{
     color: #C2C2C2;
 }
 
 .create_desc{
     padding-bottom: 30px;
     border-bottom: 1px solid #DBDBDB;
-
 }
