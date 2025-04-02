@@ -1,0 +1,46 @@
+.ViewBox{
+    height: 80vh;
+    align-content: center;
+}
+
+.TeamList{
+    width: 65vw;
+    justify-self: center;
+    max-height: 70vh;
+}
+
+.view_only_ing{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.view_only_ing input{
+    width: 15px;
+    height: 15px;
+}
+
+.view_only_ing input:checked{
+    background-color: '#5B8BF7';
+}
+
+.view_only_ing span{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.team_list{
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.team_list::-webkit-scrollbar{
+    display: none;
+}
+
+.button_container{
+    justify-self: right;
+    margin-top: 20px;
+}
