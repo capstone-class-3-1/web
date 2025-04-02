@@ -11,8 +11,10 @@
 
 .team_title{
     font-family: "Paperlogy";
-    font-size: 19px;
+    font-size: 20px;
+    margin-top: 30px;
     padding-bottom: 10px;
+    font-weight: 500;
     /* border-bottom: 1px solid #DBDBDB; */
 }
 
