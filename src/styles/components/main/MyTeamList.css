@@ -1,0 +1,9 @@
+.my_team_list_container{
+    margin-top: 20px;
+    height: 48vh;
+    overflow-y: auto;
+}
+
+.my_team_list_container::-webkit-scrollbar{
+    display: none;
+}
