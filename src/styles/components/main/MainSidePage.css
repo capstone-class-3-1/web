@@ -1,0 +1,28 @@
+.MainSidePage{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 300px;
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.user_name{
+    width: 215px;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user_profile{
+    width: 40px;
+    height: 40px;
+    background-color: #d8d8d8;
+    border: 1px solid #D0D0D0;
+    border-radius: 20px;
+    margin-right: 15px;
+}

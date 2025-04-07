@@ -1,0 +1,42 @@
+.ApplicationItem{
+    display: flex;
+    width: 65vw;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.profile_img{
+    background-color: #d8d8d8;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    align-self: center;
+    margin-right: 30px;
+}
+
+.application_detail{
+    align-content: center;
+}
+
+.application_detail_top{
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.application_detail_top p{
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding-top: 10px;
+    
+}
+
+.application_detail_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 57vw;
+}

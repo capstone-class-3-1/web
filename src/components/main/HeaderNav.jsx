@@ -6,7 +6,7 @@ import home from '../../assets/home-solid.png';
 import person from '../../assets/person-solid.png';
 
 const pageNavList = [
-    {icon: comment, title: '커뮤니티', to: '/community'},
+    {icon: comment, title: '커뮤니티', to: '/community/post'},
     {icon: home, title: '홈', to: '/main'},
     {icon: person, title: '마이', to: '/mypage'}
 ];
@@ -18,9 +18,9 @@ const HeaderNav = ({isCommunity}) => {
                 {
                     isCommunity && (
                         <>
-                        <NavLink className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>게시물</NavLink>
-                        <NavLink className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>모임</NavLink>
-                        <NavLink className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>행사</NavLink>
+                        <NavLink to={'post'} className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>게시물</NavLink>
+                        <NavLink to={'team'} className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>모임</NavLink>
+                        <NavLink to={'event'} className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>행사</NavLink>
                         </>
                     )
                 }
