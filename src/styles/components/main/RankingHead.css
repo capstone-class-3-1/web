@@ -1,0 +1,29 @@
+.RankingHead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+}
+
+.rank_toggle{
+    width:fit-content ;
+    height: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.rank_toggle button{
+    background-color: #D0D0D0;
+    color: black;
+    font-weight: 400;
+    font-size: 13px;
+    min-width: 60px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.rank_toggle .focus{
+    background-color: white;
+    color: #5B8BF7;
+}
