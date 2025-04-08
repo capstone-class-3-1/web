@@ -1,0 +1,85 @@
+.TeamPage{
+    width: 65vw;
+    height: 80vh;
+    justify-self: center;
+    max-height: 70vh;
+}
+
+.team_page_detail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.team_chat{
+    width: 750px;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between
+}
+
+.team_chat input {
+    color: #D0D0D0;
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.team_notice{
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.team_notice textarea{
+    color: #D0D0D0;
+    width: 100%;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    font-family: "Paperlogy";
+    font-weight: 500;
+    
+}
+
+.member_name{
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    margin-top: 20px;
+}
+
+.member_profile{
+    width: 30px;
+    height: 30px;
+    background-color: #d8d8d8;
+    border: 1px solid #D0D0D0;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.team_people_list{
+    height: 310px;
+    overflow-y: auto;
+}
+
+.team_people_list::-webkit-scrollbar{
+    display: none;
+}
+
+textarea:read-only, input:read-only{
+    color: black;
+}

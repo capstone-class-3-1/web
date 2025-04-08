@@ -1,0 +1,19 @@
+.MainUserRank{
+    overflow-y: hidden;
+}
+
+.MainUserRank .top3{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.rank_container{
+    margin-top: 20px;
+    height: calc(3*80px);
+    overflow-y: auto;
+}
+
+.rank_container::-webkit-scrollbar{
+    display: none;
+}
