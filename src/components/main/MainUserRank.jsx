@@ -44,7 +44,7 @@ const rankDto = [
     },
     {
         id:6,
-        name: 'asdf',
+        name: '잉',
         commit: 1234,
         issues:423
     }

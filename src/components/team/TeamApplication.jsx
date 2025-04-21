@@ -12,7 +12,7 @@ const TeamApplication = () => {
             <div className="TeamApplication">
                 <div className="border">
                     <button 
-                        style={{backgroundColor:'white', display:'flex' ,justifyContent:'left', marginBottom: '10px', width:'fit-width',marginLeft:0}} 
+                        style={{backgroundColor:'white', display:'flex' ,justifyContent:'left', marginBottom: '10px', width:'fit-width',marginLeft:0, border:'none'}} 
                         onClick={()=>{navigate('/community/team/page/1')}}>
                         <img src={backButton} alt="뒤로가기" width={25} />
                     </button>
