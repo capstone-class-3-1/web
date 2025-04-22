@@ -1,0 +1,17 @@
+.desc_post{
+    width: 62vw;
+}
+
+.bottom_post {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.thumb{
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-right: 10px;
+    color: #d0d0d0;
+}
