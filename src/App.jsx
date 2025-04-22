@@ -17,6 +17,8 @@ import ViewTeam from './components/team/ViewTeam';
 import MyPage from './pages/MyPage';
 
 import { Route, Routes } from 'react-router-dom';
+import GithubPage from './components/mypage/GithubPage';
+import BadgePage from './components/mypage/BadgePage';
 
 function App() {
   return (
@@ -42,7 +44,10 @@ function App() {
 
         <Route path='event'/>{/*행사*/}
       </Route>
-      <Route path='mypage' element={<MyPage/>} />
+      <Route path='mypage' element={<MyPage/>} >
+        <Route path='/' element={GithubPage} />
+        <Route path='/' element={BadgePage} />
+      </Route>
     </Routes>
   );
 }

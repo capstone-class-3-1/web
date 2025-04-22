@@ -110,7 +110,7 @@ const PostDto = [
 ]
 
 
-const TeamList = () => {
+const EntryList = () => {
     const location = useLocation();
     const isPost = location.pathname.includes('post');
 
@@ -152,4 +152,4 @@ const TeamList = () => {
     )
 }
 
-export default TeamList;
+export default EntryList;
