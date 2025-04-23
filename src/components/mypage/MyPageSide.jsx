@@ -13,28 +13,30 @@ const MyPageSide = () => {
             <div className="user_activity">
                 <h4 style={{marginBottom: 10, marginTop: 40}}>내 활동</h4>
                 <table className='activity_table'>
-                    <tr>
-                        <td>
-                            <p>리뷰 횟수</p>
-                            <p className='activity_count'>10</p>
-                        </td>
-                        <td>
-                            <p>PR 횟수</p>
-                            <p className='activity_count'>16</p>
-                        </td>
-                        <td>
-                            <p>종합 랭킹</p>
-                            <p className='activity_count'>1018위</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan={3}>내 전체 활동<span style={{marginLeft: '150px'}}>{'>'}</span></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>리뷰 횟수</p>
+                                <p className='activity_count'>10</p>
+                            </td>
+                            <td>
+                                <p>PR 횟수</p>
+                                <p className='activity_count'>16</p>
+                            </td>
+                            <td>
+                                <p>종합 랭킹</p>
+                                <p className='activity_count'>1018위</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan={3}>내 전체 활동<span style={{marginLeft: '150px'}}>{'>'}</span></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div className='profile_manage'>
                 <button className='edit_profile'>프로필 수정</button>
-                <p style={{color:'red', fontSize: '13px', margin:0}}>로그아웃</p>
+                <button className='logout'>로그아웃</button>
             </div>
         </div>
     )

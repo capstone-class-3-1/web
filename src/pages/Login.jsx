@@ -2,31 +2,39 @@ import '../styles/Login.css'
 import LoginHeader from "../components/auth/LoginHeader";
 import AuthInput from '../components/auth/AuthInput';
 import AuthButton from '../components/auth/AuthButton';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import Server from '../utils/API';
 import { Link } from 'react-router-dom';
+import { signup } from '../utils/actionType';
+
+const userform = {
+    'username': '',
+    'password': '',
+}
+
+const loginReducer = (state,action) => {
+    switch(action.type){
+        case signup.CHANGE:
+            console.log(state);
+            return {
+                ...state,
+                [action.name]:action.value
+            };
+        case signup.RESET:
+            return userform;
+
+    }
+}
 
 const Login = () => {
-    const [user, setUser] = useState({
-        'username': '',
-        'password': '',
-    })
+    const [form, dispath] = useReducer(loginReducer, userform);
 
-    const handleName = (e) => {
-        setUser({
-            ...user,
-            'username': e.target.value
-        })
-    };
-    const handlePwd = (e) => {
-        setUser({
-            ...user,
-            'password': e.target.value
-        })
-    };
+    const handleForm = (name, value) => {
+        dispath({type:signup.CHANGE, name, value});
+    }
 
     const sendData = async () => {
-        Server.post('/auth/login',user,{
+        Server.post('/auth/login',form,{
             headers:{
                 "Content-Type": 'application/json'
             }
@@ -42,7 +50,7 @@ const Login = () => {
     }
 
     const onClickButton = () => {
-        if(user.username=='' || user.password==''){
+        if(form.username=='' || form.password==''){
             alert('이름과 비밀번호를 모두 입력해주세요.');
             return;
         }
@@ -54,8 +62,8 @@ const Login = () => {
             <LoginHeader />
             <div className="login_container">
             <div className="form">
-                <AuthInput placeholder={"이름"} type={"text"} data={user.username} handle={handleName}/>
-                <AuthInput placeholder={"비밀번호"} type={"password"} data={user.password} handle={handlePwd} />
+                <AuthInput placeholder={"이름"} type={"text"} name={'username'} data={form.username} handle={handleForm}/>
+                <AuthInput placeholder={"비밀번호"} type={"password"} name={'password'} data={form.password} handle={handleForm} />
                 <AuthButton value={"로그인"} onclick={onClickButton}/>
                 <div className="found">
                     <Link className='found_item'>아이디 찾기</Link> | <Link className='found_item'>비밀번호 찾기</Link>

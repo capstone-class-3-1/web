@@ -45,7 +45,7 @@ function App() {
         <Route path='event'/>{/*행사*/}
       </Route>
       <Route path='mypage' element={<MyPage/>} >
-        <Route element={<GithubPage />} />
+        <Route index element={<GithubPage />} />
         <Route path='badge' element={<BadgePage />} />
       </Route>
     </Routes>

@@ -8,4 +8,5 @@
 
 .contents{
     display: flex;
+    flex: 1;
 }
