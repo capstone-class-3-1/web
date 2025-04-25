@@ -34,14 +34,15 @@ const Login = () => {
     }
 
     const sendData = async () => {
-        Server.post('/auth/login',form,{
+        Server.post('/login',form,{
             headers:{
                 "Content-Type": 'application/json'
             }
         })
         .then((res)=>{
-            console.log(res.data);
+            console.log(res);
             console.log('로그인 성공');
+            dispath({type:signup.RESET});       
         })
         .catch((error)=>{
             console.log(error);

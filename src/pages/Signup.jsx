@@ -12,6 +12,7 @@ const userform = {
     'password': '',
     'confirmPassword': '',
     'school': '',
+    'email':''
 }
 
 const signReducer = (state,action) => {
@@ -40,18 +41,21 @@ const Signup = () => {
             'username': form.username,
             'password': form.password,
             'confirmPassword': form.confirmPassword,
-            "school": form.school
+            "school": form.school,
+            'email': form.email
         },{
             headers:{
                 "Content-Type": 'application/json'
             }
         })
         .then((res)=>{
-            console.log(res.data);
+            console.log(res);
             console.log('회원가입 성공');
+            dispath({type:signup.RESET})
         })
         .catch((error)=>{
             console.log(error);
+            alert(error.response.data);
             console.log('회원가입 실패');
         })
     }
@@ -77,6 +81,7 @@ const Signup = () => {
                     <AuthInput placeholder={"비밀번호"} type={"password"} name={'password'} data={form.password} handle={handleForm} />
                     <AuthInput placeholder={"비밀번호 확인"} type={"password"} name={'confirmPassword'} data={form.confirmPassword} handle={handleForm} />
                     <AuthInput placeholder={"학교"} type={"text"} name={'school'} data={form.school} handle={handleForm}/>
+                    <AuthInput placeholder={"이메일"} type={"email"} name={'email'} data={form.email} handle={handleForm}/>
                 <div style={{marginBottom: '50px'}}/>
                 <AuthButton value={"회원가입 하기"} onclick={onClickButton}/>
                 <div className="found signup">
