@@ -4,7 +4,7 @@ import AuthInput from '../components/auth/AuthInput';
 import AuthButton from '../components/auth/AuthButton';
 import { useReducer, useState } from 'react';
 import Server from '../utils/API';
-import { Link } from 'react-router-dom';
+import { Link, href } from 'react-router-dom';
 import { signup } from '../utils/actionType';
 
 const userform = {
@@ -34,7 +34,7 @@ const Login = () => {
     }
 
     const sendData = async () => {
-        Server.post('/login',form,{
+        Server.post('/api/login',form,{
             headers:{
                 "Content-Type": 'application/json'
             }
@@ -58,6 +58,10 @@ const Login = () => {
         sendData();
     }
 
+    const loginGithub = () => {
+        window.open('https://github.com/login/oauth/authorize?client_id=Ov23liG2nzd77CtuJ9cZ&redirect_uri=https://www.gitmago.com/auth/github/callback&scope=read:user')
+    }
+
     return(
         <div className="Login">
             <LoginHeader />
@@ -69,7 +73,7 @@ const Login = () => {
                 <div className="found">
                     <Link className='found_item'>아이디 찾기</Link> | <Link className='found_item'>비밀번호 찾기</Link>
                 </div>
-                <AuthButton value={"깃허브로 바로 로그인"} type={"git"} onclick={()=>console.log("안녕")}/>
+                <AuthButton value={"깃허브로 바로 로그인"} type={"git"} onclick={loginGithub}/>
                 <div className="found signup">
                     <span className='found_item'>회원이 아니신가요?</span> <Link className='found_item' to={'/signup'}>회원가입하러가기</Link>
                 </div>

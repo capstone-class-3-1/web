@@ -20,6 +20,11 @@
     color: black;
 }
 
+.AuthInput input:disabled{
+    user-select: none;
+    color: #8e8e8e;
+}
+
 .AuthInput input::placeholder{
     color: #8e8e8e;
 }
@@ -28,4 +33,10 @@
     background-color: white;
     border: none;
     cursor: pointer;
+}
+
+.valid_btn{
+    color: white;
+    border-radius: 5px;
+    font-family: "SUITE";
 }
