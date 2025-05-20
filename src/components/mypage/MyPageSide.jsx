@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../../styles/components/mypage/MyPageSide.css'
 import colorCode from '../../utils/color';
 
@@ -6,7 +7,7 @@ const MyPageSide = () => {
         <div className ="MyPageSide">
             <div className="profile"></div>
             <h2 className="user_name">jinhyeon-dev</h2>
-            <p className="intro" style={{color: colorCode.pointBlue}} >이슈해결왕 Lv.5 • <span style={{textDecoration: `underline ${colorCode.pointBlue}`}}>내 칭호보기</span>{'>'}</p>
+            <p className="intro" style={{color: colorCode.pointBlue}} >이슈해결왕 Lv.5 • <Link to={'badge'} style={{color: colorCode.pointBlue}}>내 칭호보기 {' >'}</Link></p>
             <p className="intro">주사용언어 | Dart</p>
             <p className="intro">소속 | 경북소프트웨어마이스터고등학교 </p>
 

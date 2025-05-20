@@ -6,6 +6,10 @@
     margin-left: 60px;
 }
 
+.GithubPage p {
+    margin-bottom: 30px;
+}
+
 .github_tooltip {
     font-size: 11px !important;
 }

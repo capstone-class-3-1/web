@@ -7,7 +7,7 @@ const GithubPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     return(
         <div className="GithubPage">
-            <p>내 칭호</p>
+            <p>내 잔디</p>
             <GitHubCalendar 
                 username='lioba00700'
                 fontSize={12}
