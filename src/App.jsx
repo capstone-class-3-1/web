@@ -32,7 +32,7 @@ function App() {
       <Route path='community' element={<Community/>}>
         <Route path='post' element={<TeamList />}/>{/*게시글*/}
           <Route path='post/create' />
-          <Route path='team/view/:id'/>
+          <Route path='post/view/:id'/>
 
 
 
