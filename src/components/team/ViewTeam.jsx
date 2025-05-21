@@ -14,7 +14,7 @@ const ViewTeam = () => {
         <div className="ViewBox">
             <div className="ViewTeam">
                 <button 
-                    style={{backgroundColor:'white', display:'flex' ,justifyContent:'left', marginBottom: '10px', width:'fit-width',marginLeft:0}} 
+                    style={{backgroundColor:'white', display:'flex' ,justifyContent:'left', marginBottom: '10px', width:'fit-width',marginLeft:0, border:'none'}} 
                     onClick={()=>{navigate('/community/team')}}>
                     <img src={backButton} alt="뒤로가기" width={25} />
                 </button>

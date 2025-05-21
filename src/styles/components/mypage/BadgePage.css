@@ -1,0 +1,36 @@
+.BadgePage {
+    font-family: 'Paperlogy';
+    margin-top: 4%;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 60px;
+    margin-right: 100px;
+    flex: 1;
+}
+
+.BadgePage p {
+    margin-bottom: 30px;
+}
+
+.badge_table {
+    font-weight: 400;
+    font-size: 15px;
+    width: 100%;
+}
+
+.badge_table, .badge_table td {
+    border:  1px solid #D0D0D0;
+    border-collapse: collapse;
+}
+
+.badge_table td {
+    padding: 10px;
+}
+
+.badge_container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

@@ -21,6 +21,7 @@
     min-width: 60px;
     margin: 0;
     border-radius: 0;
+    border: none;
 }
 
 .rank_toggle .focus{
