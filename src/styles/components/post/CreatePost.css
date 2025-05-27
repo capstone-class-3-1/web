@@ -1,0 +1,42 @@
+.team_period{
+    display: flex;
+    align-items: center;
+}
+
+.post_mention {
+    display: flex;
+    font-family: "Paperlogy";
+    font-weight: 300;
+    font-size: 13px;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-left: 5px;
+}
+
+
+.post_mention input {
+    border: none;
+    flex: 1;
+    padding: 0;
+}
+
+.mention_item{
+    color: #5B8BF7;
+    background-color: #BDD1FC;
+    width: fit-content;
+    height: fit-content;
+    padding: 1;
+    margin-right: 3px;
+    align-self: center;
+}
+
+.mention_button{
+    border: none;
+    background: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}

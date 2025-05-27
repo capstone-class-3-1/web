@@ -19,6 +19,7 @@ import MyPage from './pages/MyPage';
 import { Route, Routes } from 'react-router-dom';
 import GithubPage from './components/mypage/GithubPage';
 import BadgePage from './components/mypage/BadgePage';
+import CreatePost from './components/post/CreatePost';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
 
       <Route path='community' element={<Community/>}>
         <Route path='post' element={<TeamList />}/>{/*게시글*/}
-          <Route path='post/create' />
+          <Route path='post/create' element={<CreatePost />} />
           <Route path='post/view/:id'/>
 
 
