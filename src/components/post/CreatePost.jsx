@@ -16,20 +16,27 @@ const CreatePost = () => {
         setWriteMention(e.target.value);
     }
 
-    const addMention = (e) => {
-        if(mentions.includes(e.target.value))return;
+    const addMention = () => {
+        if(mentions.includes(writeMention))return;
+        if(mentions.length === 5){
+            //추후 커스텀 모달로 알림창 구현
+            alert('언급은 최대 5명까지 가능합니다.')
+            //입력값 초기화
+            setWriteMention('');
+            return
+        }
 
         setMentions((prev)=>[...prev, writeMention]);
         setWriteMention('');
     }
 
-    const deleteMention = ({item}) => {
-
+    const deleteMention = (deleteItem) => {
+        setMentions((prev) => (prev.filter((item) => item !== deleteItem)))
     }
 
     const onCompleteKeyDown = (e) => {
         if(e.key == 'Enter' || e.key === ' '){
-            addMention(e);
+            addMention();
         }
     }
 
@@ -44,16 +51,21 @@ const CreatePost = () => {
                         깃허브 주소 |  <input type="url" placeholder='https://'/>
                     </div>
                     <div className="team_period">
-                        언급 |  <div className='post_mention'>
-                                    {
-                                        mentions.map((item) => (
-                                            <div key={item} 
-                                                className='mention_item'                                                    
-                                            >@{item}</div>
-                                        ))
-                                    }
-                                    <input type="text" value={writeMention} onChange={onChangeMention} onKeyDown={onCompleteKeyDown} /><button className='mention_button'><img src={plusPeople} alt="언급추가" width={18} /></button>
-                                </div>
+                        <div className='post_write_mention'>
+                            <span>언급 |</span> 
+                            <input type="text" value={writeMention} onChange={onChangeMention} onKeyDown={onCompleteKeyDown} />
+                            <button className='mention_button' onClick={addMention}><img src={plusPeople} alt="언급추가" width={18} /></button>
+                        </div>
+                        <div className='post_mention'>
+                            {
+                                mentions.map((item) => (
+                                    <div key={item} 
+                                        className='mention_item'
+                                        onClick={() => deleteMention(item)}                                              
+                                    >@{item}</div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
                 <div className="create_desc">
