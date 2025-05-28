@@ -14,9 +14,14 @@ const CreatePost = () => {
 
     const onChangeMention = (e) => {
         setWriteMention(e.target.value);
+        //공백 제거
+        setWriteMention((prev) => prev.replace(" ", ""));
     }
 
     const addMention = () => {
+        //입력이 없을 경우
+        if(writeMention == "")return;
+
         if(mentions.includes(writeMention))return;
         if(mentions.length === 5){
             //추후 커스텀 모달로 알림창 구현
