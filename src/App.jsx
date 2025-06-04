@@ -8,7 +8,7 @@ import Signup from './pages/Signup';
 import Main from './pages/Main';
 
 import Community from './pages/Community';
-import TeamList from './components/team/EntryList';
+import EntryList from './components/team/EntryList';
 import TeamPage from './components/team/TeamPage';
 import CreateTeam from './components/team/CreateTeam';
 import TeamApplication from './components/team/TeamApplication';
@@ -20,6 +20,7 @@ import { Route, Routes } from 'react-router-dom';
 import GithubPage from './components/mypage/GithubPage';
 import BadgePage from './components/mypage/BadgePage';
 import CreatePost from './components/post/CreatePost';
+import ViewPost from './components/post/ViewPost';
 
 function App() {
   return (
@@ -31,13 +32,11 @@ function App() {
       <Route path='main' element={<Main/>}/>
 
       <Route path='community' element={<Community/>}>
-        <Route path='post' element={<TeamList />}/>{/*게시글*/}
+        <Route path='post' element={<EntryList />}/>{/*게시글*/}
           <Route path='post/create' element={<CreatePost />} />
-          <Route path='post/view/:id'/>
+          <Route path='post/view/:id' element={<ViewPost />}/>
 
-
-
-        <Route path='team' element={<TeamList />}/>{/*모임*/}
+        <Route path='team' element={<EntryList />}/>{/*모임*/}
           <Route path='team/create' element={<CreateTeam />}/>
           <Route path='team/application/:teamCode' element={<TeamApplication />}/>
           <Route path='team/view/:id' element={<ViewTeam />}/>
