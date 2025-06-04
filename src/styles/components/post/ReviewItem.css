@@ -1,0 +1,22 @@
+.ReviewItem{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.reviewer_name{
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reviewer_profile{
+    width: 30px;
+    height: 30px;
+    background-color: #d8d8d8;
+    border: 1px solid #D0D0D0;
+    border-radius: 20px;
+    margin-right: 10px;
+}

@@ -3,7 +3,6 @@ import { useState } from 'react'
 import '../../styles/components/team/CreateTeam.css';
 import '../../styles/components/post/CreatePost.css';
 import Button from '../Button';
-import colorCode from '../../utils/color';
 import plusPeople from '../../assets/plus_member.png'
 
 const CreatePost = () => {

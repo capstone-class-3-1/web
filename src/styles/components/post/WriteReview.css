@@ -1,0 +1,49 @@
+.WriteReview{
+    margin-bottom: 30px;
+}
+
+.ReviewBox{
+    width: 63.5vw;
+    resize: none;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    outline: none;
+    padding: 13px;
+    font-family: "Paperlogy";
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.review_textarea{
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: "Paperlogy";
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.review_header{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 5px;
+}
+
+.markdown_button{
+    cursor: pointer;
+    background: none;
+    color: black;
+    font-weight: 400;
+    font-size: 15px;
+    width: 30px;
+    height: 22px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-right: 5px;
+    border: 1px solid #D0D0D0;
+}
