@@ -42,7 +42,6 @@ function App() {
           <Route path='team/view/:id' element={<ViewTeam />}/>
           <Route path='team/page/:teamCode' element={<TeamPage />}/>
 
-        <Route path='event'/>{/*행사*/}
       </Route>
       <Route path='mypage' element={<MyPage/>} >
         <Route index element={<GithubPage />} />
