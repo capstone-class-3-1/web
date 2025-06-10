@@ -1,0 +1,33 @@
+.Signup{
+    background-color: #F5F5F5;
+}
+
+.signup_container{
+    align-content: center;
+}
+
+.Signup .form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 50px;
+}
+
+.found{
+    font-family: "SUITE";
+    font-weight: 400;
+    color: #8e8e8e;
+    font-size: 12px;
+    align-self: flex-end;
+    margin-bottom: 35px;
+}
+
+.signup{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.found_item{
+    color: #8e8e8e;
+}

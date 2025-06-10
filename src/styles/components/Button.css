@@ -1,9 +1,10 @@
-button{
+.button_custom{
     color: white;
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: "Paperlogy";
     border: none;
-    padding: 2px;
+    padding: 5px;
     min-width: 90px;
     border-radius: 5px;
     margin-left: 10px;

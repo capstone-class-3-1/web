@@ -1,12 +1,13 @@
 .ViewBox{
-    height: 80vh;
     align-content: center;
+    height: auto;
 }
 
 .CreateTeam{
     width: 65vw;
     justify-self: center;
-    max-height: 70vh;
+    padding-top: 60px;
+    padding-bottom: 50px;
 }
 
 .title{
@@ -17,9 +18,9 @@
     outline: none;
     border: none;
     font-family: "Paperlogy";
-    font-size: 19px;
+    font-size: 22px;
     padding-bottom: 10px;
-    
+    width: 100%;
 }
 
 .title input::placeholder{
@@ -29,7 +30,7 @@
 .team_info{
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     padding-top: 14px;
     padding-bottom: 12px;
@@ -39,8 +40,10 @@
     outline: none;
     font-family: "Paperlogy";
     font-weight: 300;
+    font-size: 13px;
     border: 1px solid #D0D0D0;
     border-radius: 5px;
+    padding: 5px;
 }
 
 .create_desc textarea{
@@ -51,6 +54,7 @@
     outline: none;
     font-family: "Paperlogy";
     font-weight: 300;
+    font-size: 15px;
     padding: 10px;
 }
 

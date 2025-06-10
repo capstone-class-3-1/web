@@ -1,0 +1,28 @@
+.RankItem{
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 4px 10px 5px #EDEDED;
+    height: 60px;
+    border-radius: 10px;
+    align-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.rank_order.item{
+    position:initial;
+    font-weight: 600;
+    color: #D0D0D0;
+    margin-left: 30px;
+    align-content: center;
+}
+
+.rank_name.item{
+    width: 215px;
+    margin-left: 25px;
+}
+
+.item .rank_profile{
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,15 @@
+.GithubPage{
+    font-family: 'Paperlogy';
+    margin-top: 6%;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+.GithubPage p {
+    margin-bottom: 30px;
+}
+
+.github_tooltip {
+    font-size: 11px !important;
+}

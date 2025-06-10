@@ -1,4 +1,18 @@
 .Main{
     background-color: #F5F5F5;
     height: 100vh;
+
+    font-family: "Paperlogy";
+    color: black;
+}
+
+.main_container{
+    display: flex;
+}
+
+.ranking{
+    margin-left: 360px;
+    margin-right: 60px;
+    margin-top: 2vh;
+    flex: 1;
 }

@@ -1,4 +1,12 @@
 .MyPage{
     background-color: #F5F5F5;
     height: 100vh;
+
+    font-family: "Paperlogy";
+    color: black;
+}
+
+.contents{
+    display: flex;
+    flex: 1;
 }
