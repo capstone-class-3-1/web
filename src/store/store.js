@@ -1,8 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "./reducers/authSlice";
+import {persistStore} from 'redux-persist'
+import { authPersistReducer } from "./persistConfig";
 
-export const store = configureStore({
+const store = configureStore({
     reducer: {
-        auth: authReducer,
+        auth: authPersistReducer,
     }
 })
+
+const persistor = persistStore(store)
+
+export { store, persistor }
