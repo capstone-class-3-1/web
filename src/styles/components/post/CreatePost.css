@@ -1,0 +1,40 @@
+.team_period{
+    display: flex;
+    flex-direction: column;
+}
+
+.team_period span{
+    margin-top: 5px;
+    margin-right: 3px;
+}
+
+.post_write_mention{
+    display: flex;
+    justify-content: right;
+}
+
+.post_mention{
+    display: flex;
+    margin: 4px;
+    justify-content: right;
+}
+
+.mention_item{
+    color: #5B8BF7;
+    background-color: #BDD1FC;
+    width: fit-content;
+    height: fit-content;
+    padding: 1;
+    margin-right: 3px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.mention_button{
+    border: none;
+    background: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}

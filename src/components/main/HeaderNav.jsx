@@ -20,7 +20,6 @@ const HeaderNav = ({isCommunity}) => {
                         <>
                         <NavLink to={'post'} className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>게시물</NavLink>
                         <NavLink to={'team'} className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>모임</NavLink>
-                        <NavLink to={'event'} className={({isActive}) => isActive ? 'nav-item active-nav' : 'nav-item '}>행사</NavLink>
                         </>
                     )
                 }

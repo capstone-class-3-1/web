@@ -8,7 +8,8 @@
 
 .rank_toggle{
     width:fit-content ;
-    height: fit-content;
+    height: 20px;
+    border: 1px solid #D0D0D0;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -19,9 +20,11 @@
     font-weight: 400;
     font-size: 13px;
     min-width: 60px;
+    height: 20px;
     margin: 0;
     border-radius: 0;
     border: none;
+    cursor: pointer;
 }
 
 .rank_toggle .focus{

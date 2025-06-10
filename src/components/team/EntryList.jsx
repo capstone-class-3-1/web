@@ -117,7 +117,6 @@ const EntryList = () => {
     const navigate = useNavigate();
     const [view,setView] = useState(false);
     return(
-        <div className="ViewBox">
             <div className="TeamList">
                 <div className="view_only_ing">
                     <input type="checkbox" onChange={()=>setView(!view)} /><span>{isPost ? '내가 언급된 글만 보기' : '모집 중인 모임만 보기'}</span>
@@ -147,8 +146,6 @@ const EntryList = () => {
                     <Button value={'글쓰기'} onclick={()=>{navigate('create')}}/>
                 </div>
             </div>
-            
-        </div>
     )
 }
 

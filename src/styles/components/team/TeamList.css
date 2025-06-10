@@ -1,12 +1,13 @@
 .ViewBox{
     height: 80vh;
-    align-content: center;
+    align-content:normal;
 }
 
 .TeamList{
     width: 65vw;
     justify-self: center;
-    max-height: 70vh;
+    padding-bottom: 80px;
+    padding-top: 30px;
 }
 
 .view_only_ing{
@@ -32,7 +33,6 @@
 }
 
 .team_list{
-    height: 60vh;
     overflow-y: auto;
 }
 
