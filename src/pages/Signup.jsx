@@ -33,7 +33,7 @@ const signReducer = (state,action) => {
 
 const Signup = () => {
     const [form, dispath] = useReducer(signReducer, userform);
-    const [verifiCode , setVerifiCode] = useState(false);
+    const [checkVerifiCode , setCheckVerifiCode] = useState(false);
 
     console.log(form)
 
@@ -77,18 +77,18 @@ const Signup = () => {
             }
         })
         .then((res) => {
-            setVerifiCode(true);
+            setCheckVerifiCode(true);
             console.log(res)
             alert('인증되었습니다.');
         })
         .catch((error) => {
             console.log(error);
-            setVerifiCode(false)
+            setCheckVerifiCode(false)
             alert('인증이 실패했습니다.')
         })
     }
 
-    const sendData = async () => {
+    const sendData = () => {
         Server.post('/api/auth/register',{
             'username': form.username,
             'password': form.password,
@@ -119,6 +119,10 @@ const Signup = () => {
         }
         if(form.password!==form.confirmPassword){
             alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
+            return;
+        }
+        if(checkVerifiCode===false){
+            alert('이메일 인증을 완료해주세요.');
             return;
         }
         sendData();
