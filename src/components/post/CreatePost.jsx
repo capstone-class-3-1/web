@@ -54,7 +54,7 @@ const CreatePost = () => {
                     <div className="team_name">
                         깃허브 주소 |  <input type="url" placeholder='https://'/>
                     </div>
-                    <div className="team_period">
+                    <div className="post_period">
                         <div className='post_write_mention'>
                             <span>언급 |</span> 
                             <input type="text" value={writeMention} onChange={onChangeMention} onKeyDown={onCompleteKeyDown} />
