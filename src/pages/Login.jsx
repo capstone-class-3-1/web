@@ -3,9 +3,11 @@ import LoginHeader from "../components/auth/LoginHeader";
 import AuthInput from '../components/auth/AuthInput';
 import AuthButton from '../components/auth/AuthButton';
 import { useReducer, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Server from '../utils/API';
 import { Link, href } from 'react-router-dom';
 import { signup } from '../utils/actionType';
+import { login } from '../store/reducers/authSlice';
 
 const userform = {
     'username': '',
@@ -27,10 +29,11 @@ const loginReducer = (state,action) => {
 }
 
 const Login = () => {
-    const [form, dispath] = useReducer(loginReducer, userform);
+    const [form, formDispatch] = useReducer(loginReducer, userform);
+    const dispatch = useDispatch();
 
     const handleForm = (name, value) => {
-        dispath({type:signup.CHANGE, name, value});
+        formDispatch({type:signup.CHANGE, name, value});
     }
 
     const sendData = async () => {
@@ -42,7 +45,9 @@ const Login = () => {
         .then((res)=>{
             console.log(res);
             console.log('로그인 성공');
-            dispath({type:signup.RESET});       
+            dispatch(login({email:form.email, token: res.data.token}));
+            formDispatch({type:signup.RESET}); 
+
         })
         .catch((error)=>{
             console.log(error);
