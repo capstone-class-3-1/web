@@ -12,6 +12,7 @@
     font-family: "Paperlogy";
     font-weight: 300;
     font-size: 15px;
+    z-index: 0;
 }
 
 .review_textarea{
