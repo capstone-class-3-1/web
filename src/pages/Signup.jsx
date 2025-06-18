@@ -3,8 +3,8 @@ import LoginHeader from "../components/auth/LoginHeader";
 import AuthInput from '../components/auth/AuthInput';
 import AuthButton from '../components/auth/AuthButton';
 import { useReducer, useState } from 'react';
-import Server from '../utils/API';
-import { Link } from 'react-router-dom';
+import Server from '../utils/PublicAPI';
+import { Link, useNavigate } from 'react-router-dom';
 import { signup } from '../utils/actionType';
 import SelectSchool from '../components/auth/SelectSchool';
 
@@ -32,6 +32,8 @@ const signReducer = (state,action) => {
 }
 
 const Signup = () => {
+    const navigate = useNavigate();
+
     const [form, dispath] = useReducer(signReducer, userform);
     const [checkVerifiCode , setCheckVerifiCode] = useState(false);
 
@@ -104,6 +106,8 @@ const Signup = () => {
             console.log(res);
             console.log('회원가입 성공');
             dispath({type:signup.RESET})
+            navigate('/login');
+            
         })
         .catch((error)=>{
             console.log(error);
@@ -134,8 +138,8 @@ const Signup = () => {
             <div className="signup_container">
             <div className="form">
                     <AuthInput placeholder={"이름"} type={"text"} name={'username'} data={form.username} handle={handleForm}/>
-                    <AuthInput placeholder={"이메일"} type={"email"} name={'email'} data={form.email} handle={handleForm} onClick={sendEmail} disabled={verifiCode}/>
-                    <AuthInput placeholder={"인증번호"} type={"text"} name={'verifiCode'} data={form.verifiCode} handle={handleForm} onClick={sendCode}  disabled={verifiCode}/>
+                    <AuthInput placeholder={"이메일"} type={"email"} name={'email'} data={form.email} handle={handleForm} onClick={sendEmail} disabled={checkVerifiCode}/>
+                    <AuthInput placeholder={"인증번호"} type={"text"} name={'verifiCode'} data={form.verifiCode} handle={handleForm} onClick={sendCode}  disabled={checkVerifiCode}/>
                     <AuthInput placeholder={"비밀번호"} type={"password"} name={'password'} data={form.password} handle={handleForm} />
                     <AuthInput placeholder={"비밀번호 확인"} type={"password"} name={'confirmPassword'} data={form.confirmPassword} handle={handleForm} />
                     <SelectSchool data={form.school} handle={handleForm}/>
