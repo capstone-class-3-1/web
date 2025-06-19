@@ -2,9 +2,28 @@ import '../../styles/components/mypage/BadgePage.css'
 import { useNavigate } from "react-router-dom";
 import backButton from '../../assets/Arrow back ios new.png'
 import BadgeItem from './BadgeItem';
+import { useEffect, useState } from 'react';
+import PrivateServer from '../../utils/PrivateAPI';
 
 const BadgePage = () => {
     const navigate = useNavigate();
+
+    const [badgeList, setBadgeList] = useState([]);
+
+    useEffect(()=>{
+        const viewBadge = () => {
+            PrivateServer.get('/api/title/my')
+            .then((res) => {
+                setBadgeList(res.data);
+                console.log(res.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        }
+        viewBadge();
+    },[]);
+
     return(
         <div className="BadgePage">
             <button 
@@ -23,13 +42,11 @@ const BadgePage = () => {
                     <tr>
                         <td className='badge_wrapper'>
                             <div className='badge_container'>
-                                <BadgeItem />
-                                <BadgeItem />
-                                <BadgeItem />
-                                <BadgeItem />
-                                <BadgeItem />
-                                <BadgeItem />
-                                <BadgeItem />
+                                {
+                                    badgeList.map((item)=>(
+                                        <BadgeItem key={item.name} name={item.name} imageUrl={item.imageUrl} level={item.level}/>
+                                    ))
+                                }
                             </div>
                         </td>
                     </tr>

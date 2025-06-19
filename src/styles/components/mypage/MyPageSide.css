@@ -66,6 +66,7 @@
     font-size: 13px;
     border: none;
     color: red;
+    cursor: pointer;
 }
 
 .profile_manage{

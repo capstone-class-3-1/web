@@ -4,8 +4,8 @@ import AuthInput from '../components/auth/AuthInput';
 import AuthButton from '../components/auth/AuthButton';
 import { useReducer, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Server from '../utils/API';
-import { Link, href } from 'react-router-dom';
+import Server from '../utils/PublicAPI';
+import { Link, href, useNavigate } from 'react-router-dom';
 import { signup } from '../utils/actionType';
 import { login } from '../store/reducers/authSlice';
 
@@ -29,6 +29,8 @@ const loginReducer = (state,action) => {
 }
 
 const Login = () => {
+    const navigate = useNavigate();
+
     const [form, formDispatch] = useReducer(loginReducer, userform);
     const dispatch = useDispatch();
 
@@ -47,6 +49,7 @@ const Login = () => {
             console.log('로그인 성공');
             dispatch(login({email:form.email, token: res.data.token}));
             formDispatch({type:signup.RESET}); 
+            navigate('/main')
 
         })
         .catch((error)=>{
