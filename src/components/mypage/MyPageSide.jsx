@@ -1,15 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/components/mypage/MyPageSide.css'
 import colorCode from '../../utils/color';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../store/reducers/authSlice';
 
-const MyPageSide = () => {
+const MyPageSide = ({data, pullRequest, issue}) => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const onClickLogout = () => {
+        alert('로그아웃 되었습니다.');
+        dispatch(logout());
+    }
+
+    if(!data)return;
+
     return(
         <div className ="MyPageSide">
-            <div className="profile"></div>
-            <h2 className="user_name">jinhyeon-dev</h2>
+            <div className="profile">{data.githubAvatar}</div>
+            <h2 className="user_name">{data.username}</h2>
             <p className="intro" style={{color: colorCode.pointBlue}} >이슈해결왕 Lv.5 • <Link to={'badge'} style={{color: colorCode.pointBlue}}>내 칭호보기 {' >'}</Link></p>
             <p className="intro">주사용언어 | Dart</p>
-            <p className="intro">소속 | 경북소프트웨어마이스터고등학교 </p>
+            <p className="intro">소속 | {data.school} </p>
 
             <div className="user_activity">
                 <h4 style={{marginBottom: 10, marginTop: 40}}>내 활동</h4>
@@ -17,12 +29,12 @@ const MyPageSide = () => {
                     <tbody>
                         <tr>
                             <td>
-                                <p>리뷰 횟수</p>
-                                <p className='activity_count'>10</p>
+                                <p>이슈 횟수</p>
+                                <p className='activity_count'>{issue | 0}</p>
                             </td>
                             <td>
                                 <p>PR 횟수</p>
-                                <p className='activity_count'>16</p>
+                                <p className='activity_count'>{pullRequest | 0}</p>
                             </td>
                             <td>
                                 <p>종합 랭킹</p>
@@ -37,7 +49,7 @@ const MyPageSide = () => {
             </div>
             <div className='profile_manage'>
                 <button className='edit_profile'>프로필 수정</button>
-                <button className='logout'>로그아웃</button>
+                <button className='logout' onClick={onClickLogout}>로그아웃</button>
             </div>
         </div>
     )
